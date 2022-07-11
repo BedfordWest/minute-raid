@@ -1,21 +1,18 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://UI/SunMoon.png" type="Texture" id=1]
-[ext_resource path="res://UI/SunMoon.gd" type="Script" id=2]
+[ext_resource path="res://UI/DayCycle.tscn" type="PackedScene" id=1]
 
-[node name="GUI" type="MarginContainer"]
+[node name="GUI" type="CanvasLayer"]
+
+[node name="PrimaryContainer" type="MarginContainer" parent="."]
 margin_left = 10.0
 margin_top = 10.0
 margin_right = 10.0
 margin_bottom = 10.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 64.0
-margin_bottom = 64.0
+[node name="HBoxContainer" type="HBoxContainer" parent="PrimaryContainer"]
 
-[node name="SunMoon" type="TextureRect" parent="HBoxContainer"]
-margin_right = 64.0
-margin_bottom = 64.0
-rect_pivot_offset = Vector2( 32, 32 )
-texture = ExtResource( 1 )
-script = ExtResource( 2 )
+[node name="DayCycle" parent="PrimaryContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_right = 0.0
+margin_bottom = 0.0
+rect_scale = Vector2( 1, 1 )

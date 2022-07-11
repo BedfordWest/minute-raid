@@ -11,8 +11,12 @@ config_version=4
 [application]
 
 config/name="Minute Raid"
-run/main_scene="res://World.tscn"
+run/main_scene="res://MinuteRaid.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://Globals.gd"
 
 [display]
 
