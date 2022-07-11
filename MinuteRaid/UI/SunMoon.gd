@@ -12,5 +12,8 @@ func _process(delta):
 	_adjust_rotation(_elapsed)
 	
 func _adjust_rotation(elapsed):
+	# Want to be halfway around the circle after 60 seconds
+	#   so multiply seconds by 3 (60 * 3 = 180 degrees)
+	#   and don't forget to convert from degrees to radians!
 	var _rotation = deg2rad((elapsed * 3))
 	set_rotation(_rotation)

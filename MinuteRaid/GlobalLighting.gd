@@ -12,15 +12,18 @@ func _process(delta):
 	# Want to transition from day to night every minute
 	_elapsed += delta
 	_elapsed = fmod(_elapsed,120.0)
+	_shift_global_lighting(_elapsed)
+		
+func _shift_global_lighting(elapsed):
 	var _interpolation = 0.0
-	if _elapsed >= 30.0 && _elapsed < 90.0:
-		_interpolation = (_elapsed - 30.0)/60.0
+	if elapsed >= 30.0 && elapsed < 90.0:
+		_interpolation = (elapsed - 30.0)/60.0
 		set_color(hsv_lerp(DAY_COLOR, NIGHT_COLOR, _interpolation))
-	elif _elapsed >= 90.0:
-		_interpolation = (_elapsed - 90.0)/60.0
+	elif elapsed >= 90.0:
+		_interpolation = (elapsed - 90.0)/60.0
 		set_color(hsv_lerp(NIGHT_COLOR, DAY_COLOR, _interpolation))
 	else:
-		_interpolation = (_elapsed + 30.0)/60.0
+		_interpolation = (elapsed + 30.0)/60.0
 		set_color(hsv_lerp(NIGHT_COLOR, DAY_COLOR, _interpolation))
 		
 func hsv_lerp(cola, colb, t):
