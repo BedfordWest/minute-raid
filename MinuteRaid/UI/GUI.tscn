@@ -13,6 +13,4 @@ margin_bottom = 10.0
 [node name="HBoxContainer" type="HBoxContainer" parent="PrimaryContainer"]
 
 [node name="DayCycle" parent="PrimaryContainer/HBoxContainer" instance=ExtResource( 1 )]
-margin_right = 0.0
-margin_bottom = 0.0
 rect_scale = Vector2( 1, 1 )
