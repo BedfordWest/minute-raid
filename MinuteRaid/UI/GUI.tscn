@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://UI/DayCycle.tscn" type="PackedScene" id=1]
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="PrimaryContainer" type="MarginContainer" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 10.0
+margin_bottom = 10.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PrimaryContainer"]
+
+[node name="DayCycle" parent="PrimaryContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_right = 0.0
+margin_bottom = 0.0
+rect_scale = Vector2( 1, 1 )

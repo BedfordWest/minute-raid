@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/ZombieHand.png" type="Texture" id=1]
+[ext_resource path="res://MinuteRaid.gd" type="Script" id=2]
+[ext_resource path="res://GlobalLighting.gd" type="Script" id=3]
+[ext_resource path="res://UI/GUI.tscn" type="PackedScene" id=4]
+
+[node name="MinuteRaid" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="GUI" parent="." instance=ExtResource( 4 )]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="GlobalLighting" type="CanvasModulate" parent="World"]
+show_behind_parent = true
+color = Color( 0.164706, 0.156863, 0.117647, 1 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="World"]
+position = Vector2( 192, 86 )
+scale = Vector2( 1, 0.6875 )
+texture = ExtResource( 1 )
