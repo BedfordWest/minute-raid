@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Environment/grass1.png" type="Texture" id=1]
+
+[node name="Grass" type="TextureRect"]
+margin_right = 411.0
+margin_bottom = 282.0
+texture = ExtResource( 1 )
+stretch_mode = 2
