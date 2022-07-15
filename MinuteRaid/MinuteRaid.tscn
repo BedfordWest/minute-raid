@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Objects/CampFire.tscn" type="PackedScene" id=1]
 [ext_resource path="res://MinuteRaid.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://UI/GUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Environment/DirtTiles.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Environment/Grass.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Entities/Enemies/Zombie.tscn" type="PackedScene" id=7]
 
 [node name="MinuteRaid" type="Node2D"]
 script = ExtResource( 2 )
@@ -31,3 +32,9 @@ z_index = 1
 
 [node name="DirtTiles" parent="World" instance=ExtResource( 5 )]
 tile_data = PoolIntArray( 327692, 0, 0, 327693, 0, 1, 327694, 0, 1, 327695, 0, 1, 327696, 0, 1, 327697, 0, 2, 393227, 0, 0, 393228, 0, 131078, 393229, 0, 65537, 393230, 0, 65537, 393231, 0, 65537, 393232, 0, 65537, 393233, 0, 65538, 458763, 0, 65536, 458764, 0, 65537, 458765, 0, 65537, 458766, 0, 65537, 458767, 0, 65537, 458768, 0, 65537, 458769, 0, 65538, 524299, 0, 131072, 524300, 0, 65542, 524301, 0, 65537, 524302, 0, 65537, 524303, 0, 65537, 524304, 0, 65541, 524305, 0, 131074, 589836, 0, 65536, 589837, 0, 65537, 589838, 0, 65537, 589839, 0, 65537, 589840, 0, 65538, 655372, 0, 65536, 655373, 0, 65537, 655374, 0, 65537, 655375, 0, 65537, 655376, 0, 65538, 720908, 0, 131072, 720909, 0, 65542, 720910, 0, 65541, 720911, 0, 131073, 720912, 0, 131074, 786445, 0, 131072, 786446, 0, 131074 )
+
+[node name="Zombie" parent="." instance=ExtResource( 7 )]
+position = Vector2( 300, -4 )
+
+[node name="Zombie2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 87, 180 )

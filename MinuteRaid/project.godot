@@ -8,6 +8,46 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "State",
+"class": "EntityState",
+"language": "GDScript",
+"path": "res://Utilities/States/EntityState.gd"
+}, {
+"base": "State",
+"class": "GameState",
+"language": "GDScript",
+"path": "res://Utilities/States/GameState.gd"
+}, {
+"base": "Node",
+"class": "LivingEntity",
+"language": "GDScript",
+"path": "res://Entities/LivingEntity.gd"
+}, {
+"base": "Node",
+"class": "Movement",
+"language": "GDScript",
+"path": "res://Utilities/Movement.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://Utilities/States/State.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://Utilities/States/StateMachine.gd"
+} ]
+_global_script_class_icons={
+"EntityState": "",
+"GameState": "",
+"LivingEntity": "",
+"Movement": "",
+"State": "",
+"StateMachine": ""
+}
+
 [application]
 
 config/name="Minute Raid"
