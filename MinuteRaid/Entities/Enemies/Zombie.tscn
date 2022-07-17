@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Entities/Zombie_Front1.png" type="Texture" id=1]
 [ext_resource path="res://Entities/Enemies/Zombie.gd" type="Script" id=2]
@@ -20,6 +20,47 @@ radius = 52.0865
 
 [sub_resource type="Animation" id=5]
 resource_name = "Idle"
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body/Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Body/Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Body/Sprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
 
 [sub_resource type="AnimationNodeAnimation" id=6]
 animation = "Idle"
@@ -37,6 +78,7 @@ script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Body"]
 texture = ExtResource( 1 )
+hframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
 visible = false
@@ -76,6 +118,7 @@ script = ExtResource( 5 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationController"]
 root_node = NodePath("../..")
 anims/Idle = SubResource( 5 )
+anims/RESET = SubResource( 9 )
 
 [node name="AnimationTree" type="AnimationTree" parent="AnimationController"]
 tree_root = SubResource( 7 )

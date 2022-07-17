@@ -12,6 +12,9 @@ onready var _movement = get_node("Movement")
 onready var _state_machine = get_node("StateMachine")
 onready var _sprite = get_node("Drawing/Character")
 
+func _ready():
+	_state_machine.set_state_entities(self)	
+	
 func _process(delta):
 	if(health <= 0):
 		die()
